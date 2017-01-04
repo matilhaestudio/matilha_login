@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Diego Haas Sanches"]
   s.email       = ["egoforia@gmail.com"]
   s.homepage    = "https://github.com/matilhaestudio/matilha_login"
-  s.summary     = "TODO: Summary of MatilhaLogin."
-  s.description = "TODO: Description of MatilhaLogin."
+  s.summary     = "Login via email, Facebook, Google Account, entre outros são comuns entre vários projetos. Essa engine é uma solução simples para usar qualquer tipo de login para aplicações Rails."
+  s.description = "Rails Engine para gerenciar diferentes tipos de logins"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
@@ -20,4 +20,6 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 4.2.0"
 
   s.add_development_dependency "mysql2"
+
+  s.add_dependency "devise"
 end

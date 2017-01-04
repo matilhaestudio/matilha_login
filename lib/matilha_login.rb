@@ -1,3 +1,4 @@
+require 'devise'
 require "matilha_login/engine"
 
 module MatilhaLogin
