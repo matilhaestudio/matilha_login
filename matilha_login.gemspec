@@ -22,4 +22,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency "mysql2"
 
   s.add_dependency "devise"
+  s.add_dependency "omniauth"
+  s.add_dependency "omniauth-facebook"
 end
