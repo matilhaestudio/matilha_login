@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+	mount MatilhaLogin::Engine, at: "/"
 
-  mount MatilhaLogin::Engine => "/matilha_login"
+	root to: 'home#index'
 end
