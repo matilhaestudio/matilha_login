@@ -1,6 +1,7 @@
 module MatilhaLogin
   class Identity < ActiveRecord::Base
-    belongs_to :matilha_login_user
+    belongs_to :matilha_login_user, class_name: MatilhaLogin::User
+
     validates_presence_of :uid, :provider
   	validates_uniqueness_of :uid, :scope => :provider
 
