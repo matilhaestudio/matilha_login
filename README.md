@@ -16,9 +16,10 @@ Then run bundle install
 ### Terminal
 You will need to copy migrations and execute them with the following commands:
 
-`rake app:matilha_login:install:migration
-
-rake db:migrate`
+```
+rake app:matilha_login:install:migration
+rake db:migrate
+```
 
 ### routes.rb
 Mount it on your routes to have access to the login pages
