@@ -5,7 +5,7 @@ Currently suppports:
  - [Devise](https://github.com/plataformatec/devise)
  - [Facebook] (https://github.com/mkdynamic/omniauth-facebook)
 
-# Instalação
+# Installation
 ### Gemfile
 Add it to your Gemfile
 ```ruby
@@ -17,7 +17,7 @@ Then run bundle install
 You will need to copy migrations and execute them with the following commands:
 
 ```
-rake app:matilha_login:install:migration
+rake matilha_login:install:migrations
 rake db:migrate
 ```
 
