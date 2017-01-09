@@ -37,7 +37,7 @@ Set up Facebook configuration on initializer **config/initializers/matilha_login
 
 Example:
 
-```
+```ruby
 config.facebook_app_id = "1660887170876551"
 config.facebook_app_secret = "3dcd72e8ab7fda6d2591fbc31edbc3cb"
 ```
