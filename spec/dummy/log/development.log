@@ -11506,3 +11506,13 @@ Started GET "/assets/matilha_login/omniauth_callbacks.self-19a187bec6cdb96d6de80
 
 
 Started GET "/assets/matilha_login/application.self-fb28094035fc8f155b896e47c199355db7c84fc9d6214ed9800f1022ac2ece52.js?body=1" for ::1 at 2017-01-09 10:24:34 -0200
+  [1m[36mMatilhaLogin::Identity Load (3.8ms)[0m  [1mSELECT  `matilha_login_identities`.* FROM `matilha_login_identities` WHERE `matilha_login_identities`.`uid` = '123123' AND `matilha_login_identities`.`provider` = 'facebook' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mMatilhaLogin::Identity Exists (1.9ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '123123' AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1[0m
+  [1m[35mSQL (2.9ms)[0m  INSERT INTO `matilha_login_identities` (`uid`, `provider`, `created_at`, `updated_at`) VALUES ('123123', 'facebook', '2017-01-09 18:19:07', '2017-01-09 18:19:07')
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mMatilhaLogin::User Load (0.4ms)[0m  [1mSELECT  `matilha_login_users`.* FROM `matilha_login_users`  ORDER BY `matilha_login_users`.`id` ASC LIMIT 1[0m
+  [1m[35mMatilhaLogin::User Load (0.4ms)[0m  SELECT  `matilha_login_users`.* FROM `matilha_login_users`  ORDER BY `matilha_login_users`.`id` ASC LIMIT 1
+  [1m[36mMatilhaLogin::User Load (0.5ms)[0m  [1mSELECT  `matilha_login_users`.* FROM `matilha_login_users`  ORDER BY `matilha_login_users`.`id` ASC LIMIT 1[0m

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170104191134) do
+ActiveRecord::Schema.define(version: 20170109125158) do
 
   create_table "matilha_login_identities", force: :cascade do |t|
     t.integer  "matilha_login_user_id", limit: 4

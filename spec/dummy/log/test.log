@@ -1,0 +1,338 @@
+  [1m[36m (28.5ms)[0m  [1mDROP DATABASE IF EXISTS `dummy_test`[0m
+  [1m[35m (1.3ms)[0m  CREATE DATABASE `dummy_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (38.2ms)[0m  [1mCREATE TABLE `matilha_login_identities` (`id` int(11) auto_increment PRIMARY KEY, `matilha_login_user_id` int(11), `provider` varchar(255), `uid` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (35.7ms)[0m  CREATE  INDEX `index_matilha_login_identities_on_matilha_login_user_id` USING btree ON `matilha_login_identities` (`matilha_login_user_id`) 
+  [1m[36m (12.3ms)[0m  [1mCREATE TABLE `matilha_login_users` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (25.9ms)[0m  CREATE UNIQUE INDEX `index_matilha_login_users_on_email` USING btree ON `matilha_login_users` (`email`) 
+  [1m[36m (15.6ms)[0m  [1mCREATE UNIQUE INDEX `index_matilha_login_users_on_reset_password_token` USING btree ON `matilha_login_users` (`reset_password_token`) [0m
+  [1m[35m (20.7ms)[0m  ALTER TABLE `matilha_login_identities` ADD CONSTRAINT `fk_rails_107695b196`
+FOREIGN KEY (`matilha_login_user_id`)
+  REFERENCES `matilha_login_users` (`id`)
+
+  [1m[36m (10.5ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (13.3ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20170104191134')
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36m (24.2ms)[0m  [1mDROP DATABASE IF EXISTS `dummy_test`[0m
+  [1m[35m (0.5ms)[0m  CREATE DATABASE `dummy_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (25.0ms)[0m  [1mCREATE TABLE `matilha_login_identities` (`id` int(11) auto_increment PRIMARY KEY, `matilha_login_user_id` int(11), `provider` varchar(255), `uid` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (17.8ms)[0m  CREATE  INDEX `index_matilha_login_identities_on_matilha_login_user_id` USING btree ON `matilha_login_identities` (`matilha_login_user_id`) 
+  [1m[36m (13.7ms)[0m  [1mCREATE TABLE `matilha_login_users` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (19.5ms)[0m  CREATE UNIQUE INDEX `index_matilha_login_users_on_email` USING btree ON `matilha_login_users` (`email`) 
+  [1m[36m (10.1ms)[0m  [1mCREATE UNIQUE INDEX `index_matilha_login_users_on_reset_password_token` USING btree ON `matilha_login_users` (`reset_password_token`) [0m
+  [1m[35m (25.2ms)[0m  ALTER TABLE `matilha_login_identities` ADD CONSTRAINT `fk_rails_107695b196`
+FOREIGN KEY (`matilha_login_user_id`)
+  REFERENCES `matilha_login_users` (`id`)
+
+  [1m[36m (11.9ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (16.0ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20170104191134')
+  [1m[35mActiveRecord::SchemaMigration Load (1.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36m (10.3ms)[0m  [1mDROP DATABASE IF EXISTS `dummy_test`[0m
+  [1m[35m (0.5ms)[0m  CREATE DATABASE `dummy_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (17.1ms)[0m  [1mCREATE TABLE `matilha_login_identities` (`id` int(11) auto_increment PRIMARY KEY, `matilha_login_user_id` int(11), `provider` varchar(255), `uid` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (11.2ms)[0m  CREATE  INDEX `index_matilha_login_identities_on_matilha_login_user_id` USING btree ON `matilha_login_identities` (`matilha_login_user_id`) 
+  [1m[36m (15.5ms)[0m  [1mCREATE TABLE `matilha_login_users` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (9.9ms)[0m  CREATE UNIQUE INDEX `index_matilha_login_users_on_email` USING btree ON `matilha_login_users` (`email`) 
+  [1m[36m (15.4ms)[0m  [1mCREATE UNIQUE INDEX `index_matilha_login_users_on_reset_password_token` USING btree ON `matilha_login_users` (`reset_password_token`) [0m
+  [1m[35m (21.5ms)[0m  ALTER TABLE `matilha_login_identities` ADD CONSTRAINT `fk_rails_107695b196`
+FOREIGN KEY (`matilha_login_user_id`)
+  REFERENCES `matilha_login_users` (`id`)
+
+  [1m[36m (10.3ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (21.3ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20170104191134')
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36m (8.3ms)[0m  [1mDROP DATABASE IF EXISTS `dummy_test`[0m
+  [1m[35m (0.4ms)[0m  CREATE DATABASE `dummy_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (11.3ms)[0m  [1mCREATE TABLE `matilha_login_identities` (`id` int(11) auto_increment PRIMARY KEY, `matilha_login_user_id` int(11), `provider` varchar(255), `uid` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (16.5ms)[0m  CREATE  INDEX `index_matilha_login_identities_on_matilha_login_user_id` USING btree ON `matilha_login_identities` (`matilha_login_user_id`) 
+  [1m[36m (10.7ms)[0m  [1mCREATE TABLE `matilha_login_users` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (10.6ms)[0m  CREATE UNIQUE INDEX `index_matilha_login_users_on_email` USING btree ON `matilha_login_users` (`email`) 
+  [1m[36m (16.7ms)[0m  [1mCREATE UNIQUE INDEX `index_matilha_login_users_on_reset_password_token` USING btree ON `matilha_login_users` (`reset_password_token`) [0m
+  [1m[35m (17.1ms)[0m  ALTER TABLE `matilha_login_identities` ADD CONSTRAINT `fk_rails_107695b196`
+FOREIGN KEY (`matilha_login_user_id`)
+  REFERENCES `matilha_login_users` (`id`)
+
+  [1m[36m (10.1ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (13.0ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20170104191134')
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36m (7.4ms)[0m  [1mDROP DATABASE IF EXISTS `dummy_test`[0m
+  [1m[35m (0.4ms)[0m  CREATE DATABASE `dummy_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (17.5ms)[0m  [1mCREATE TABLE `matilha_login_identities` (`id` int(11) auto_increment PRIMARY KEY, `matilha_login_user_id` int(11), `provider` varchar(255), `uid` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (15.8ms)[0m  CREATE  INDEX `index_matilha_login_identities_on_matilha_login_user_id` USING btree ON `matilha_login_identities` (`matilha_login_user_id`) 
+  [1m[36m (11.0ms)[0m  [1mCREATE TABLE `matilha_login_users` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (10.3ms)[0m  CREATE UNIQUE INDEX `index_matilha_login_users_on_email` USING btree ON `matilha_login_users` (`email`) 
+  [1m[36m (21.6ms)[0m  [1mCREATE UNIQUE INDEX `index_matilha_login_users_on_reset_password_token` USING btree ON `matilha_login_users` (`reset_password_token`) [0m
+  [1m[35m (21.5ms)[0m  ALTER TABLE `matilha_login_identities` ADD CONSTRAINT `fk_rails_107695b196`
+FOREIGN KEY (`matilha_login_user_id`)
+  REFERENCES `matilha_login_users` (`id`)
+
+  [1m[36m (11.1ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (16.4ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20170104191134')
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36m (11.6ms)[0m  [1mDROP DATABASE IF EXISTS `dummy_test`[0m
+  [1m[35m (0.4ms)[0m  CREATE DATABASE `dummy_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (18.5ms)[0m  [1mCREATE TABLE `matilha_login_identities` (`id` int(11) auto_increment PRIMARY KEY, `matilha_login_user_id` int(11), `provider` varchar(255), `uid` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (11.8ms)[0m  CREATE  INDEX `index_matilha_login_identities_on_matilha_login_user_id` USING btree ON `matilha_login_identities` (`matilha_login_user_id`) 
+  [1m[36m (12.1ms)[0m  [1mCREATE TABLE `matilha_login_users` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (10.6ms)[0m  CREATE UNIQUE INDEX `index_matilha_login_users_on_email` USING btree ON `matilha_login_users` (`email`) 
+  [1m[36m (9.7ms)[0m  [1mCREATE UNIQUE INDEX `index_matilha_login_users_on_reset_password_token` USING btree ON `matilha_login_users` (`reset_password_token`) [0m
+  [1m[35m (16.6ms)[0m  ALTER TABLE `matilha_login_identities` ADD CONSTRAINT `fk_rails_107695b196`
+FOREIGN KEY (`matilha_login_user_id`)
+  REFERENCES `matilha_login_users` (`id`)
+
+  [1m[36m (10.3ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (15.3ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20170104191134')
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36m (7.6ms)[0m  [1mDROP DATABASE IF EXISTS `dummy_test`[0m
+  [1m[35m (0.4ms)[0m  CREATE DATABASE `dummy_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (11.8ms)[0m  [1mCREATE TABLE `matilha_login_identities` (`id` int(11) auto_increment PRIMARY KEY, `matilha_login_user_id` int(11), `provider` varchar(255), `uid` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (17.7ms)[0m  CREATE  INDEX `index_matilha_login_identities_on_matilha_login_user_id` USING btree ON `matilha_login_identities` (`matilha_login_user_id`) 
+  [1m[36m (21.5ms)[0m  [1mCREATE TABLE `matilha_login_users` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (21.2ms)[0m  CREATE UNIQUE INDEX `index_matilha_login_users_on_email` USING btree ON `matilha_login_users` (`email`) 
+  [1m[36m (15.6ms)[0m  [1mCREATE UNIQUE INDEX `index_matilha_login_users_on_reset_password_token` USING btree ON `matilha_login_users` (`reset_password_token`) [0m
+  [1m[35m (23.4ms)[0m  ALTER TABLE `matilha_login_identities` ADD CONSTRAINT `fk_rails_107695b196`
+FOREIGN KEY (`matilha_login_user_id`)
+  REFERENCES `matilha_login_users` (`id`)
+
+  [1m[36m (17.2ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (12.7ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20170104191134')
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36m (6.1ms)[0m  [1mDROP DATABASE IF EXISTS `dummy_test`[0m
+  [1m[35m (0.4ms)[0m  CREATE DATABASE `dummy_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (11.4ms)[0m  [1mCREATE TABLE `matilha_login_identities` (`id` int(11) auto_increment PRIMARY KEY, `matilha_login_user_id` int(11), `provider` varchar(255), `uid` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (10.9ms)[0m  CREATE  INDEX `index_matilha_login_identities_on_matilha_login_user_id` USING btree ON `matilha_login_identities` (`matilha_login_user_id`) 
+  [1m[36m (21.6ms)[0m  [1mCREATE TABLE `matilha_login_users` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (10.9ms)[0m  CREATE UNIQUE INDEX `index_matilha_login_users_on_email` USING btree ON `matilha_login_users` (`email`) 
+  [1m[36m (17.0ms)[0m  [1mCREATE UNIQUE INDEX `index_matilha_login_users_on_reset_password_token` USING btree ON `matilha_login_users` (`reset_password_token`) [0m
+  [1m[35m (23.0ms)[0m  ALTER TABLE `matilha_login_identities` ADD CONSTRAINT `fk_rails_107695b196`
+FOREIGN KEY (`matilha_login_user_id`)
+  REFERENCES `matilha_login_users` (`id`)
+
+  [1m[36m (10.2ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (13.0ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20170104191134')
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36m (8.7ms)[0m  [1mDROP DATABASE IF EXISTS `dummy_test`[0m
+  [1m[35m (0.4ms)[0m  CREATE DATABASE `dummy_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (10.6ms)[0m  [1mCREATE TABLE `matilha_login_identities` (`id` int(11) auto_increment PRIMARY KEY, `matilha_login_user_id` int(11), `provider` varchar(255), `uid` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (10.7ms)[0m  CREATE  INDEX `index_matilha_login_identities_on_matilha_login_user_id` USING btree ON `matilha_login_identities` (`matilha_login_user_id`) 
+  [1m[36m (11.7ms)[0m  [1mCREATE TABLE `matilha_login_users` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (10.3ms)[0m  CREATE UNIQUE INDEX `index_matilha_login_users_on_email` USING btree ON `matilha_login_users` (`email`) 
+  [1m[36m (9.2ms)[0m  [1mCREATE UNIQUE INDEX `index_matilha_login_users_on_reset_password_token` USING btree ON `matilha_login_users` (`reset_password_token`) [0m
+  [1m[35m (15.4ms)[0m  ALTER TABLE `matilha_login_identities` ADD CONSTRAINT `fk_rails_107695b196`
+FOREIGN KEY (`matilha_login_user_id`)
+  REFERENCES `matilha_login_users` (`id`)
+
+  [1m[36m (11.0ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (24.5ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20170104191134')
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (2.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to DeviseCreateMatilhaLoginUsers (20170109125156)
+  [1m[35m (0.7ms)[0m  CREATE TABLE `matilha_login_users` (`id` int(11) auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (12.9ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (22.3ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to DeviseCreateMatilhaLoginUsers (20170109125156)
+  [1m[35m (17.8ms)[0m  CREATE TABLE `matilha_login_users` (`id` int(11) auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (10.0ms)[0m  [1mCREATE UNIQUE INDEX `index_matilha_login_users_on_email`  ON `matilha_login_users` (`email`) [0m
+  [1m[35m (10.5ms)[0m  CREATE UNIQUE INDEX `index_matilha_login_users_on_reset_password_token`  ON `matilha_login_users` (`reset_password_token`) 
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20170109125156')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to AddNameToUsers (20170109125157)
+  [1m[35m (18.3ms)[0m  ALTER TABLE `matilha_login_users` ADD `name` varchar(255) AFTER `id`
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20170109125157')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMatilhaLoginIdentities (20170109125158)
+  [1m[35m (11.5ms)[0m  CREATE TABLE `matilha_login_identities` (`id` int(11) auto_increment PRIMARY KEY, `matilha_login_user_id` int(11), `provider` varchar(255), `uid` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_matilha_login_identities_on_matilha_login_user_id`  (`matilha_login_user_id`) ) ENGINE=InnoDB
+  [1m[36m (16.7ms)[0m  [1mALTER TABLE `matilha_login_identities` ADD CONSTRAINT `fk_rails_107695b196`
+FOREIGN KEY (`matilha_login_user_id`)
+  REFERENCES `matilha_login_users` (`id`)
+[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20170109125158')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (2.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'dummy_test'
+  AND fk.table_name = 'matilha_login_identities'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `matilha_login_identities`[0m
+  [1m[35m (0.7ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'dummy_test'
+  AND fk.table_name = 'matilha_login_users'
+
+  [1m[36m (0.3ms)[0m  [1mSHOW CREATE TABLE `matilha_login_users`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36m (5.9ms)[0m  [1mDROP DATABASE IF EXISTS `dummy_test`[0m
+  [1m[35m (0.4ms)[0m  CREATE DATABASE `dummy_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (12.4ms)[0m  [1mCREATE TABLE `matilha_login_identities` (`id` int(11) auto_increment PRIMARY KEY, `matilha_login_user_id` int(11), `provider` varchar(255), `uid` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (17.1ms)[0m  CREATE  INDEX `index_matilha_login_identities_on_matilha_login_user_id` USING btree ON `matilha_login_identities` (`matilha_login_user_id`) 
+  [1m[36m (10.4ms)[0m  [1mCREATE TABLE `matilha_login_users` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (15.8ms)[0m  CREATE UNIQUE INDEX `index_matilha_login_users_on_email` USING btree ON `matilha_login_users` (`email`) 
+  [1m[36m (14.0ms)[0m  [1mCREATE UNIQUE INDEX `index_matilha_login_users_on_reset_password_token` USING btree ON `matilha_login_users` (`reset_password_token`) [0m
+  [1m[35m (20.8ms)[0m  ALTER TABLE `matilha_login_identities` ADD CONSTRAINT `fk_rails_107695b196`
+FOREIGN KEY (`matilha_login_user_id`)
+  REFERENCES `matilha_login_users` (`id`)
+
+  [1m[36m (10.2ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (18.3ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20170109125158')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20170109125156')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20170109125157')
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::Identity Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `matilha_login_identities` (`provider`, `uid`, `created_at`, `updated_at`) VALUES ('facebook', '1342113245845288', '2017-01-09 19:04:53', '2017-01-09 19:04:53')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.9ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36m (28.8ms)[0m  [1mDROP DATABASE IF EXISTS `dummy_test`[0m
+  [1m[35m (0.8ms)[0m  CREATE DATABASE `dummy_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (24.1ms)[0m  [1mCREATE TABLE `matilha_login_identities` (`id` int(11) auto_increment PRIMARY KEY, `matilha_login_user_id` int(11), `provider` varchar(255), `uid` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (22.6ms)[0m  CREATE  INDEX `index_matilha_login_identities_on_matilha_login_user_id` USING btree ON `matilha_login_identities` (`matilha_login_user_id`) 
+  [1m[36m (15.6ms)[0m  [1mCREATE TABLE `matilha_login_users` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (26.5ms)[0m  CREATE UNIQUE INDEX `index_matilha_login_users_on_email` USING btree ON `matilha_login_users` (`email`) 
+  [1m[36m (13.7ms)[0m  [1mCREATE UNIQUE INDEX `index_matilha_login_users_on_reset_password_token` USING btree ON `matilha_login_users` (`reset_password_token`) [0m
+  [1m[35m (24.9ms)[0m  ALTER TABLE `matilha_login_identities` ADD CONSTRAINT `fk_rails_107695b196`
+FOREIGN KEY (`matilha_login_user_id`)
+  REFERENCES `matilha_login_users` (`id`)
+
+  [1m[36m (13.0ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (20.8ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36m (1.0ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20170109125158')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20170109125156')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20170109125157')
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::Identity Exists (1.8ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `matilha_login_identities` (`provider`, `uid`, `created_at`, `updated_at`) VALUES ('facebook', '1342113245845288', '2017-01-09 19:05:30', '2017-01-09 19:05:30')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::Identity Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `matilha_login_identities` (`provider`, `uid`, `created_at`, `updated_at`) VALUES ('facebook', '1342113245845288', '2017-01-09 19:05:54', '2017-01-09 19:05:54')
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mMatilhaLogin::Identity Load (0.5ms)[0m  SELECT  `matilha_login_identities`.* FROM `matilha_login_identities` WHERE `matilha_login_identities`.`uid` = '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::Identity Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `matilha_login_identities` (`provider`, `uid`, `created_at`, `updated_at`) VALUES ('facebook', '1342113245845288', '2017-01-09 19:06:32', '2017-01-09 19:06:32')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mMatilhaLogin::Identity Load (0.5ms)[0m  SELECT  `matilha_login_identities`.* FROM `matilha_login_identities` WHERE `matilha_login_identities`.`uid` = '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook' LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::Identity Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `matilha_login_identities` (`provider`, `uid`, `created_at`, `updated_at`) VALUES ('facebook', '1342113245845288', '2017-01-09 19:06:46', '2017-01-09 19:06:46')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mMatilhaLogin::Identity Load (0.3ms)[0m  SELECT  `matilha_login_identities`.* FROM `matilha_login_identities` WHERE `matilha_login_identities`.`uid` = '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36m (1.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::Identity Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `matilha_login_identities` (`uid`, `provider`, `created_at`, `updated_at`) VALUES ('1342113245845288', 'facebook', '2017-01-09 19:44:06', '2017-01-09 19:44:06')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mMatilhaLogin::Identity Load (0.4ms)[0m  SELECT  `matilha_login_identities`.* FROM `matilha_login_identities` WHERE `matilha_login_identities`.`uid` = '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook' LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::Identity Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `matilha_login_identities` (`uid`, `provider`, `created_at`, `updated_at`) VALUES ('1342113245845288', 'facebook', '2017-01-09 19:48:59', '2017-01-09 19:48:59')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mMatilhaLogin::Identity Load (0.6ms)[0m  SELECT  `matilha_login_identities`.* FROM `matilha_login_identities` WHERE `matilha_login_identities`.`uid` = '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::Identity Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `matilha_login_identities` (`uid`, `provider`, `created_at`, `updated_at`) VALUES ('1342113245845288', 'facebook', '2017-01-09 19:54:50', '2017-01-09 19:54:50')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mMatilhaLogin::Identity Load (0.4ms)[0m  SELECT  `matilha_login_identities`.* FROM `matilha_login_identities` WHERE `matilha_login_identities`.`uid` = '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook' LIMIT 1
+  [1m[36m (1.3ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::Identity Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `matilha_login_identities` (`uid`, `provider`, `created_at`, `updated_at`) VALUES ('1342113245845288', 'facebook', '2017-01-09 20:00:48', '2017-01-09 20:00:48')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mMatilhaLogin::Identity Load (0.5ms)[0m  SELECT  `matilha_login_identities`.* FROM `matilha_login_identities` WHERE `matilha_login_identities`.`uid` = '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mMatilhaLogin::Identity Exists (0.3ms)[0m  SELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `matilha_login_identities` (`uid`, `provider`, `created_at`, `updated_at`) VALUES ('1342113245845288', 'facebook', '2017-01-09 20:00:48', '2017-01-09 20:00:48')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::Identity Load (0.3ms)[0m  [1mSELECT  `matilha_login_identities`.* FROM `matilha_login_identities` WHERE `matilha_login_identities`.`uid` = '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook' LIMIT 1[0m
+  [1m[35mMatilhaLogin::User Load (1.0ms)[0m  SELECT  `matilha_login_users`.* FROM `matilha_login_users` WHERE `matilha_login_users`.`email` = 'teste@teste.com.br' LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mMatilhaLogin::User Exists (3.9ms)[0m  SELECT  1 AS one FROM `matilha_login_users` WHERE `matilha_login_users`.`email` = BINARY 'teste@teste.com.br' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `matilha_login_users` (`name`, `email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('Testador de Apps', 'teste@teste.com.br', '$2a$04$9PPRPnGTS3qT0aRKbJqyF.dIyJPWkokVsYE352IwJsOUB1cwYfGcK', '2017-01-09 20:00:48', '2017-01-09 20:00:48')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mMatilhaLogin::Identity Exists (1.9ms)[0m  SELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`id` != 9 AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1
+  [1m[36mSQL (3.1ms)[0m  [1mUPDATE `matilha_login_identities` SET `matilha_login_user_id` = 1, `updated_at` = '2017-01-09 20:00:48' WHERE `matilha_login_identities`.`id` = 9[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::Identity Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `matilha_login_identities` (`uid`, `provider`, `created_at`, `updated_at`) VALUES ('1342113245845288', 'facebook', '2017-01-09 20:04:42', '2017-01-09 20:04:42')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mMatilhaLogin::Identity Load (0.4ms)[0m  SELECT  `matilha_login_identities`.* FROM `matilha_login_identities` WHERE `matilha_login_identities`.`uid` = '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook' LIMIT 1
+  [1m[36mMatilhaLogin::User Load (0.4ms)[0m  [1mSELECT  `matilha_login_users`.* FROM `matilha_login_users` WHERE `matilha_login_users`.`email` = 'teste@teste.com.br' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::User Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_users` WHERE `matilha_login_users`.`email` = BINARY 'teste@teste.com.br' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `matilha_login_users` (`name`, `email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('Testador de Apps', 'teste@teste.com.br', '$2a$04$SjmLm316EIYXPNcccue7LeDiQdiZUi.P1wmzGobhp36JMU6vFo6eO', '2017-01-09 20:04:42', '2017-01-09 20:04:42')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::Identity Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`id` != 10 AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `matilha_login_identities` SET `matilha_login_user_id` = 2, `updated_at` = '2017-01-09 20:04:42' WHERE `matilha_login_identities`.`id` = 10
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::Identity Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `matilha_login_identities` (`uid`, `provider`, `created_at`, `updated_at`) VALUES ('1342113245845288', 'facebook', '2017-01-09 20:04:42', '2017-01-09 20:04:42')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mMatilhaLogin::Identity Load (0.3ms)[0m  SELECT  `matilha_login_identities`.* FROM `matilha_login_identities` WHERE `matilha_login_identities`.`uid` = '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
