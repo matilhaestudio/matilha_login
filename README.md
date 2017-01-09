@@ -33,7 +33,7 @@ Set up your controllers with user authentication, just add this before_action
 before_action :authenticate_user!
 ```
 ### Facebook Configuration
-Set up Facebook configuration on initializer **config/initializers/matilha_login.rb
+Set up Facebook configuration on initializer **config/initializers/matilha_login.rb**
 
 Example:
 
