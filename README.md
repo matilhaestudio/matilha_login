@@ -32,6 +32,16 @@ Set up your controllers with user authentication, just add this before_action
 ```ruby
 before_action :authenticate_user!
 ```
+
+### Devise URL helpers
+All url helpers from devise can be accessed from plugin matilha_login
+
+Logout example:
+
+```ruby
+matilha_login.destroy_user_session_path
+```
+
 ### Facebook Configuration
 Set up Facebook configuration on initializer **config/initializers/matilha_login.rb**
 
