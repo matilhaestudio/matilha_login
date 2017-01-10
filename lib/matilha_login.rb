@@ -25,7 +25,7 @@ module MatilhaLogin
 			return if MatilhaLogin.facebook_app_id.blank? or MatilhaLogin.facebook_app_secret.nil?
 			Devise.setup do |config|
 				# setting up facebook omniauth configuration
-	  			config.omniauth :facebook, MatilhaLogin.facebook_app_id, MatilhaLogin.facebook_app_secret
+  			config.omniauth :facebook, MatilhaLogin.facebook_app_id, MatilhaLogin.facebook_app_secret
 			end
 		end
 end
