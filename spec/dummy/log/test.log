@@ -336,3 +336,153 @@ FOREIGN KEY (`matilha_login_user_id`)
   [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
   [1m[35mMatilhaLogin::Identity Load (0.3ms)[0m  SELECT  `matilha_login_identities`.* FROM `matilha_login_identities` WHERE `matilha_login_identities`.`uid` = '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook' LIMIT 1
   [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::Identity Exists (4.1ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1[0m
+  [1m[35mSQL (2.5ms)[0m  INSERT INTO `matilha_login_identities` (`uid`, `provider`, `created_at`, `updated_at`) VALUES ('1342113245845288', 'facebook', '2017-01-10 15:45:21', '2017-01-10 15:45:21')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mMatilhaLogin::Identity Load (0.4ms)[0m  SELECT  `matilha_login_identities`.* FROM `matilha_login_identities` WHERE `matilha_login_identities`.`uid` = '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook' LIMIT 1
+  [1m[36m (1.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mMatilhaLogin::Identity Exists (0.4ms)[0m  SELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `matilha_login_identities` (`uid`, `provider`, `created_at`, `updated_at`) VALUES ('1342113245845288', 'facebook', '2017-01-10 15:45:21', '2017-01-10 15:45:21')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::Identity Load (0.4ms)[0m  [1mSELECT  `matilha_login_identities`.* FROM `matilha_login_identities` WHERE `matilha_login_identities`.`uid` = '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook' LIMIT 1[0m
+  [1m[35mMatilhaLogin::User Load (0.7ms)[0m  SELECT  `matilha_login_users`.* FROM `matilha_login_users` WHERE `matilha_login_users`.`email` = 'teste@teste.com.br' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mMatilhaLogin::User Exists (1.3ms)[0m  SELECT  1 AS one FROM `matilha_login_users` WHERE `matilha_login_users`.`email` = BINARY 'teste@teste.com.br' LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO `matilha_login_users` (`name`, `email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('Testador de Apps', 'teste@teste.com.br', '$2a$04$K8yAE9k4MW5NHdoPcvqDie8Gb9Xmem7s2OY4hFfQeN5osV472z17G', '2017-01-10 15:45:21', '2017-01-10 15:45:21')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mMatilhaLogin::Identity Exists (0.4ms)[0m  SELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`id` != 2 AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1
+  [1m[36mSQL (1.1ms)[0m  [1mUPDATE `matilha_login_identities` SET `matilha_login_user_id` = 1, `updated_at` = '2017-01-10 15:45:21' WHERE `matilha_login_identities`.`id` = 2[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::Identity Exists (2.9ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO `matilha_login_identities` (`uid`, `provider`, `created_at`, `updated_at`) VALUES ('1342113245845288', 'facebook', '2017-01-10 16:26:56', '2017-01-10 16:26:56')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mMatilhaLogin::Identity Load (0.7ms)[0m  SELECT  `matilha_login_identities`.* FROM `matilha_login_identities` WHERE `matilha_login_identities`.`uid` = '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook' LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mMatilhaLogin::Identity Exists (0.5ms)[0m  SELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `matilha_login_identities` (`uid`, `provider`, `created_at`, `updated_at`) VALUES ('1342113245845288', 'facebook', '2017-01-10 16:26:56', '2017-01-10 16:26:56')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::Identity Load (0.3ms)[0m  [1mSELECT  `matilha_login_identities`.* FROM `matilha_login_identities` WHERE `matilha_login_identities`.`uid` = '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook' LIMIT 1[0m
+  [1m[35mMatilhaLogin::User Load (1.0ms)[0m  SELECT  `matilha_login_users`.* FROM `matilha_login_users` WHERE `matilha_login_users`.`email` = 'teste@teste.com.br' LIMIT 1
+  [1m[36m (1.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mMatilhaLogin::User Exists (0.9ms)[0m  SELECT  1 AS one FROM `matilha_login_users` WHERE `matilha_login_users`.`email` = BINARY 'teste@teste.com.br' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `matilha_login_users` (`name`, `email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('Testador de Apps', 'teste@teste.com.br', '$2a$04$cYXf6H/jhSgrOA4UpaQbzO8h/lu0LbPvImIMWhx/Fzrxgmvip81EG', '2017-01-10 16:26:56', '2017-01-10 16:26:56')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mMatilhaLogin::Identity Exists (0.4ms)[0m  SELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`id` != 4 AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1
+  [1m[36mSQL (1.2ms)[0m  [1mUPDATE `matilha_login_identities` SET `matilha_login_user_id` = 2, `updated_at` = '2017-01-10 16:26:56' WHERE `matilha_login_identities`.`id` = 4[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::Identity Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `matilha_login_identities` (`uid`, `provider`, `created_at`, `updated_at`) VALUES ('1342113245845288', 'facebook', '2017-01-10 16:28:30', '2017-01-10 16:28:30')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mMatilhaLogin::Identity Load (0.4ms)[0m  SELECT  `matilha_login_identities`.* FROM `matilha_login_identities` WHERE `matilha_login_identities`.`uid` = '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook' LIMIT 1
+  [1m[36mMatilhaLogin::User Load (0.8ms)[0m  [1mSELECT  `matilha_login_users`.* FROM `matilha_login_users` WHERE `matilha_login_users`.`email` = 'teste@teste.com.br' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::User Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_users` WHERE `matilha_login_users`.`email` = BINARY 'teste@teste.com.br' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `matilha_login_users` (`name`, `email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('Testador de Apps', 'teste@teste.com.br', '$2a$04$TRdnUofzH7gxcMweKymvxOh09SBFjOWnuI5bBL2PSZcpNl.XWFtXa', '2017-01-10 16:28:30', '2017-01-10 16:28:30')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::Identity Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`id` != 5 AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `matilha_login_identities` SET `matilha_login_user_id` = 3, `updated_at` = '2017-01-10 16:28:30' WHERE `matilha_login_identities`.`id` = 5
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.4ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::Identity Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `matilha_login_identities` (`uid`, `provider`, `created_at`, `updated_at`) VALUES ('1342113245845288', 'facebook', '2017-01-10 16:28:30', '2017-01-10 16:28:30')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::Identity Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `matilha_login_identities` (`uid`, `provider`, `created_at`, `updated_at`) VALUES ('1342113245845288', 'facebook', '2017-01-10 16:29:16', '2017-01-10 16:29:16')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mMatilhaLogin::Identity Load (0.4ms)[0m  SELECT  `matilha_login_identities`.* FROM `matilha_login_identities` WHERE `matilha_login_identities`.`uid` = '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook' LIMIT 1
+  [1m[36mMatilhaLogin::User Load (0.4ms)[0m  [1mSELECT  `matilha_login_users`.* FROM `matilha_login_users` WHERE `matilha_login_users`.`email` = 'teste@teste.com.br' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::User Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_users` WHERE `matilha_login_users`.`email` = BINARY 'teste@teste.com.br' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `matilha_login_users` (`name`, `email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('Testador de Apps', 'teste@teste.com.br', '$2a$04$Ghu0ER/qR9R/1JeQfePbIOOY0w9pWN3YsIMMxygzRV0DTpKSjS42e', '2017-01-10 16:29:16', '2017-01-10 16:29:16')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::Identity Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`id` != 7 AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `matilha_login_identities` SET `matilha_login_user_id` = 4, `updated_at` = '2017-01-10 16:29:16' WHERE `matilha_login_identities`.`id` = 7
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::Identity Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `matilha_login_identities` (`uid`, `provider`, `created_at`, `updated_at`) VALUES ('1342113245845288', 'facebook', '2017-01-10 16:29:16', '2017-01-10 16:29:16')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mMatilhaLogin::Identity Load (0.3ms)[0m  SELECT  `matilha_login_identities`.* FROM `matilha_login_identities` WHERE `matilha_login_identities`.`uid` = '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook' LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::Identity Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `matilha_login_identities` (`uid`, `provider`, `created_at`, `updated_at`) VALUES ('1342113245845288', 'facebook', '2017-01-10 16:34:51', '2017-01-10 16:34:51')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mMatilhaLogin::Identity Load (0.4ms)[0m  SELECT  `matilha_login_identities`.* FROM `matilha_login_identities` WHERE `matilha_login_identities`.`uid` = '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook' LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mMatilhaLogin::Identity Exists (0.4ms)[0m  SELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `matilha_login_identities` (`uid`, `provider`, `created_at`, `updated_at`) VALUES ('1342113245845288', 'facebook', '2017-01-10 16:34:51', '2017-01-10 16:34:51')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::Identity Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `matilha_login_identities` (`uid`, `provider`, `created_at`, `updated_at`) VALUES ('1342113245845288', 'facebook', '2017-01-10 16:35:07', '2017-01-10 16:35:07')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mMatilhaLogin::Identity Load (0.4ms)[0m  SELECT  `matilha_login_identities`.* FROM `matilha_login_identities` WHERE `matilha_login_identities`.`uid` = '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook' LIMIT 1
+  [1m[36mMatilhaLogin::User Load (0.4ms)[0m  [1mSELECT  `matilha_login_users`.* FROM `matilha_login_users` WHERE `matilha_login_users`.`email` = 'teste@teste.com.br' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::User Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_users` WHERE `matilha_login_users`.`email` = BINARY 'teste@teste.com.br' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `matilha_login_users` (`name`, `email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('Testador de Apps', 'teste@teste.com.br', '$2a$04$KdCcdLIFn0iM3/5M8xNiXuAHwOJPaG9q6jWyRLL619ygXr4Bbre/q', '2017-01-10 16:35:07', '2017-01-10 16:35:07')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::Identity Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`id` != 11 AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `matilha_login_identities` SET `matilha_login_user_id` = 5, `updated_at` = '2017-01-10 16:35:07' WHERE `matilha_login_identities`.`id` = 11
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::Identity Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `matilha_login_identities` (`uid`, `provider`, `created_at`, `updated_at`) VALUES ('1342113245845288', 'facebook', '2017-01-10 16:35:07', '2017-01-10 16:35:07')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mMatilhaLogin::Identity Load (0.2ms)[0m  SELECT  `matilha_login_identities`.* FROM `matilha_login_identities` WHERE `matilha_login_identities`.`uid` = '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::Identity Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `matilha_login_identities` (`uid`, `provider`, `created_at`, `updated_at`) VALUES ('1342113245845288', 'facebook', '2017-01-10 16:35:51', '2017-01-10 16:35:51')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mMatilhaLogin::Identity Load (0.3ms)[0m  SELECT  `matilha_login_identities`.* FROM `matilha_login_identities` WHERE `matilha_login_identities`.`uid` = '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook' LIMIT 1
+  [1m[36mMatilhaLogin::User Load (0.3ms)[0m  [1mSELECT  `matilha_login_users`.* FROM `matilha_login_users` WHERE `matilha_login_users`.`email` = 'teste@teste.com.br' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::User Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_users` WHERE `matilha_login_users`.`email` = BINARY 'teste@teste.com.br' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `matilha_login_users` (`name`, `email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('Testador de Apps', 'teste@teste.com.br', '$2a$04$9I25KqPPEG0B6Qvv7G6bd.xZKpWibEcvAHkTXT9L/b822vss/hHge', '2017-01-10 16:35:51', '2017-01-10 16:35:51')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::Identity Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`id` != 13 AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `matilha_login_identities` SET `matilha_login_user_id` = 6, `updated_at` = '2017-01-10 16:35:51' WHERE `matilha_login_identities`.`id` = 13
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mMatilhaLogin::Identity Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `matilha_login_identities` WHERE (`matilha_login_identities`.`uid` = BINARY '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `matilha_login_identities` (`uid`, `provider`, `created_at`, `updated_at`) VALUES ('1342113245845288', 'facebook', '2017-01-10 16:35:51', '2017-01-10 16:35:51')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mMatilhaLogin::Identity Load (0.3ms)[0m  SELECT  `matilha_login_identities`.* FROM `matilha_login_identities` WHERE `matilha_login_identities`.`uid` = '1342113245845288' AND `matilha_login_identities`.`provider` = 'facebook' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m

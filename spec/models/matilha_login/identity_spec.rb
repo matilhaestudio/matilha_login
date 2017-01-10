@@ -3,12 +3,12 @@ require 'rails_helper'
 module MatilhaLogin
   RSpec.describe Identity, :type => :model do
     it "finds for oauth" do
-      identity = create(:identity)
+      identity = create(:id_facebook)
 
-      json = '{
-        "uid": "1342113245845288",
-        "provider": "facebook"
-      }'
+      json = "{
+        \"uid\":      \"#{identity.uid}\",
+        \"provider\": \"#{identity.provider}\"
+      }"
 
       auth = JSON.parse json, object_class: OpenStruct
 
